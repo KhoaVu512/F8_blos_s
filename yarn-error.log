@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn run test
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.14.2
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/khoavu/Workspace/blog/package.json: Unexpected token / in JSON at position 232
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/main.js",
+    "scripts": {
+      "start": "nodemon --inspect src/main.js",
+      "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
+      // "test": "echo \"Error: no test specified\" && exit 1",
+  	"build": "babel src -d lib",
+  	"test": "jest"
+    },
+    "keywords": [
+      "f8",
+      "blog",
+      "f8",
+      "nodejs",
+      "nodejs"
+    ],
+    "author": "KhoaVu",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.18.1",
+      "express-handlebars": "^6.0.6"
+    },
+    "devDependencies": {
+      "morgan": "^1.10.0",
+      "node-sass": "^7.0.1",
+      "nodemon": "^2.0.16"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
